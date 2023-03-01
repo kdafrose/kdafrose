@@ -131,14 +131,14 @@ button:hover{
 }
 
 .Title_buttons_nav{
-  width: 110px;
+  width: 140px;
   display: flex;
   height: inherit;
   
 }
 
 .Save_button, .Delete_button{
-  width: 55px;
+  width: 70px;
   background: none;
   border: none;
 }
