@@ -117,21 +117,30 @@ button:hover{
 }
 
 .Title_nav{
-  height: 55px;
-  padding-left: 15px;
-  padding-top: 20px;
+  height: 70px;
   display: flex;
 }
 
+.Title{
+  padding-top: 25px;
+  padding-left: 15px;
+  width: 100%;
+}
+
 .Title_buttons_nav{
-  background-color: pink;
-  justify-content: end;
-  height: 60px;
+    width: 110px;
+  display: flex;
+  height: inherit;
   
 }
 
+.Save_button, .Delete_button{
+  width: 55px;
+  background: none;
+  border: none;
+}
+
 .Editor{
- 
   height: 100%;
 }
 
