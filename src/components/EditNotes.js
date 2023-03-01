@@ -12,6 +12,22 @@ function EditNotes() {
 
     const [value, setValue] = useState('');
 
+    const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+    };
+
+    const formatDate = (when) => {
+        const formatted = new Date(when).toLocaleString("en-US", options);
+        if (formatted === "Invalid Date") {
+            return "";
+        }
+        return formatted;
+    };
+
   
 
     return(
@@ -27,16 +43,20 @@ function EditNotes() {
                     </div>
                 </div>
                 <div className="Edit_column">
-                    <div className='Title_nav'>
-                        <h2 className='Title'> Notes Title</h2>
-                        <div className='Title_buttons_nav'>
-                            <button className='Save_button'>Save</button>
-                            <button className='Delete_button'>Delete</button>
+                    <div className='Edit_nav'>
+                        <div className='Title_nav'>
+                            <h2 className='Title'> Notes Title</h2>
+                            <div className='Title_nav_date'><input className='Date_button' onClick = {formatDate} type="datetime-local" /></div>
                         </div>
                         
+                        <div className='Title_buttons_nav'>
+                            <button className='Save_button'>Save</button>
+                            <button className='Delete_button'>Delete</button> 
+                        </div>
                     </div>
+                    
                     <div className='Editor' >
-                        <ReactQuill style={{ height: 700 }} theme="snow" value={value} onChange={setValue}  placeholder = "Write Your Notes..."/>
+                        <ReactQuill style={{ height: 700 }} theme="snow" value={value} onChange={setValue}  placeholder = "Your Notes Here..."/>
                     </div>
                 </div>
             </div>       
