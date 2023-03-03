@@ -6,19 +6,16 @@ import EditNotes from  "./components/EditNotes";
 
 function App() {
 
- 
   return (
     <>
       <BrowserRouter>
         <Navbar />
         <Routes>
           <Route exact path ="/" element = {<Main />}/> 
-          <Route exact path ="/Edit" element = {<EditNotes />}/>
+          <Route exact path ="/notes/:id/edit" element = {<EditNotes />}/>
         </Routes>
-    </BrowserRouter>
-  
+      </BrowserRouter>
     </>
-    
   )
 
 }

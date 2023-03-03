@@ -1,33 +1,19 @@
 import React from "react";
-//import { BrowserRouter } from 'react-router-dom';
-//import ReactQuill from 'react-quill';
-//import 'react-quill/dist/quill.snow.css';
-import { useNavigate } from 'react-router-dom';
-
-
-
-
+import uuid from 'react-uuid';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function Main() {
     //const [title, setTitle] = useState('');
     const navigate = useNavigate();
+    const {id} = useParams();
     
-    function addNote(){
-       
-        //Goes to the edit page 
-        navigate('/Edit');
-
-
-    }
-    
-
     return (
         <>
             <div className="web_container">
                 <div className="Notes_column">
                     <div className="Notes_nav">
                         <h3>Notes</h3>
-                        <button onClick={addNote}>&#43;</button>
+                        <button onClick={() => navigate('/notes/1/edit')}>&#43;</button>
                     </div>
                     <div className="Notes_column_list">
                         <p className='Notes_column_default_msg'>No Notes Yet</p>

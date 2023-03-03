@@ -15,7 +15,7 @@ root.render(
         
         <Routes>
           <Route exacpt path = "/" element = {<Main />}/>
-          <Route exact path ="/Edit" element = {<EditNotes />}/>
+          <Route exact path ="notes/:id/Edit" element = {<EditNotes />}/>
         </Routes>
     </BrowserRouter>
   
