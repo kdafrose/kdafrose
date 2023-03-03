@@ -1,17 +1,33 @@
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import uuid from 'react-uuid';
 //import Main from "./Main";
 //import { BrowserRouter } from "react-router-dom";
 
 //<ReactQuill theme="snow" value={value} onChange={setValue} />;
 
+var savedTitles = [];
 
 function EditNotes() {
     
-
+    // value for users notes
     const [value, setValue] = useState('');
 
+    // unique generated id for each notes
+    const unique_id = uuid();
+    // this generated a 6 length long id 
+    // const generated_id = unique_id.slice(0,6);
+
+    // user defined notes title
+    const [title, setTitle] = useState('Untitled');
+    const changeTitle = (evt) => {
+        setTitle(evt.target.value);
+    }
+
+    console.log(title);
+    
+    // for the Date of the notes
     const options = {
         year: "numeric",
         month: "long",
@@ -19,7 +35,6 @@ function EditNotes() {
         hour: "numeric",
         minute: "numeric",
     };
-
     const formatDate = (when) => {
         const formatted = new Date(when).toLocaleString("en-US", options);
         if (formatted === "Invalid Date") {
@@ -38,14 +53,14 @@ function EditNotes() {
                         <h3>Notes</h3>
                         <button >&#43;</button>
                     </div>
-                    <div className="Notes_column_list">
+                    <div className="Notes_column_list"> 
                         
                     </div>
                 </div>
                 <div className="Edit_column">
                     <div className='Edit_nav'>
                         <div className='Title_nav'>
-                            <h2 className='Title'> Notes Title</h2>
+                            < input type = 'text' className='Title' placeholder = {title} onChange = {changeTitle}/>
                             <div className='Title_nav_date'><input className='Date_button' onClick = {formatDate} type="datetime-local" /></div>
                         </div>
                         

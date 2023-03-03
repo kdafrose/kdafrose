@@ -30,7 +30,7 @@ function Main() {
                         <button onClick={addNote}>&#43;</button>
                     </div>
                     <div className="Notes_column_list">
-                        <p className='Notes_column_default_msg'>No Notes yet</p>
+                        <p className='Notes_column_default_msg'>No Notes Yet</p>
                     </div>
                 </div>
                 <div className="Edit_column">

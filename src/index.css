@@ -124,10 +124,12 @@ button:hover{
   width: 100%;
 }
 
-.Title{
+.Title {
   padding-top: 25px;
   padding-left: 15px;
-
+  border: none;
+  font-size: 25px;
+  outline: none;
 }
 
 .Title_buttons_nav{
