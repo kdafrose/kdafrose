@@ -1,24 +1,28 @@
-import React from "react";
-import uuid from 'react-uuid';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, {useEffect} from "react";
+import { useNavigate, useParams,  } from 'react-router-dom';
+import Sidebar from "./Sidebar";
 
 function Main() {
     //const [title, setTitle] = useState('');
-    const navigate = useNavigate();
-    const {id} = useParams();
+    //const navigate = useNavigate();
+    //const {id} = useParams();
+    
+    useEffect(() => {
+        
+
+        const defaultNotes = document.createElement('p');
+        defaultNotes.setAttribute('class', 'Notes_column_default_msg');
+        defaultNotes.innerText='No Notes Yet';
+        
+        const emptyColumn = document.querySelector('.Notes_edit_column_list');
+        emptyColumn.append(defaultNotes);
+    });
+
     
     return (
         <>
             <div className="web_container">
-                <div className="Notes_column">
-                    <div className="Notes_nav">
-                        <h3>Notes</h3>
-                        <button onClick={() => navigate('/notes/1/edit')}>&#43;</button>
-                    </div>
-                    <div className="Notes_column_list">
-                        <p className='Notes_column_default_msg'>No Notes Yet</p>
-                    </div>
-                </div>
+                <Sidebar />
                 <div className="Edit_column">
                     <h2 className = "default_message">Select a note, or create a new one</h2>
                 </div>
