@@ -33,6 +33,7 @@ function EditNotes() {
      const [value, setValue] = useState('');
      const edit = (evt) => {
          setValue(evt.target.value);
+         console.log(value);
     }
 
     // creating div for the notes preview

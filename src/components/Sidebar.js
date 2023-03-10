@@ -23,18 +23,18 @@ function Sidebar(){
         
     }
 
-    function changeNotes(element){
-        
-        const idDiv = element.id;
-        const slice = idDiv.slice(15,);
-        console.log(slice);
-        navigate('/notes/' + slice);
-
-    }
-
     
 
     useEffect(() => {
+
+        function changeNotes(element){
+        
+            const idDiv = element.id;
+            const slice = idDiv.slice(15,);
+            console.log(slice);
+            navigate('/notes/' + slice);
+    
+        }
         
         for(let i =0; i < localStorage.length; i++){
             if(localStorage.getItem('notes' + i) !== null){
@@ -70,7 +70,7 @@ function Sidebar(){
                 }
         }
         
-    }, [idParams])
+    }, [idParams, navigate])
 
     return(
         <>
