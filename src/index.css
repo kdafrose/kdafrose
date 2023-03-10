@@ -81,13 +81,10 @@ button:hover{
 
 }
 
-.Notes_column_list{
-  height: inherit;
+.Notes_column_default_msg{
   color: grey;
   font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   padding-top:20px;
 }
 
@@ -95,6 +92,7 @@ button:hover{
   width: 80%;
   
 }
+
 
 .web_container{
   display: flex;
@@ -104,6 +102,7 @@ button:hover{
 .minimize{
   display: none !important;
   visibility: none !important;
+  background-color: pink;
 }
 
 .maximize{
@@ -121,6 +120,38 @@ button:hover{
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.Title_display_nav{
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+.notes_display{
+  border-top:1px solid #d0d0d0;
+  height: 100%;
+}
+
+.View_column{
+  width: 100%;
+}
+
+.Notes_display_title{
+  font-size: 35px;
+
+}
+
+.Title_display_nav_date{
+  color: grey;
+  font-size: 12px;
+}
+
+.Notes_display_title, .Title_display_nav_date{
+  padding-left:10px;
+  padding-top: 5px;
 }
 
 .Title {
@@ -156,6 +187,7 @@ button:hover{
 
 .Edit_nav{
   display: flex;
+
 }
 
 .Notes_edit_column_list div{
@@ -169,8 +201,16 @@ button:hover{
 }
 
 .Notes_edit_column_list{
-  background-color: red;
   height: 100%;
+}
+
+.date{
+  font-size: 10px;
+  color: grey;
+}
+
+.preview{
+  font-size: 12px;
 }
 
 
