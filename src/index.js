@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Main from './components/Main';
 import EditNotes from './components/EditNotes';
 import reportWebVitals from './reportWebVitals';
+import View from './components/View';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root')); // This renders the DOM element with the element ID or root, which was the div element 
@@ -12,10 +13,10 @@ root.render(
   <>
       <BrowserRouter>
         <Navbar />
-        
         <Routes>
           <Route exacpt path = "/" element = {<Main />}/>
-          <Route exact path ="notes/:id/Edit" element = {<EditNotes />}/>
+          <Route exact path ="/notes/:id/edit" element = {<EditNotes />}/>
+          <Route exact path = "/notes/:id" element = {<View />}/>
         </Routes>
     </BrowserRouter>
   
