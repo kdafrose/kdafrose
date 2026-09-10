@@ -6,7 +6,7 @@ building something new to sharpen my skills.
 
 Right now I'm working on **YouPick**, a serverless movie discovery platform 
 architected on AWS, my first cloud-native, a full-stack project using Lambda, 
-API Gateway, RDS, and CloudFront.
+API Gateway, RDS, and CloudFront. As well as an adventure text-based rpg game in Java!
 
 Whether it's designing backend APIs, automating workflows with AI, or spinning up 
 cloud infrastructure, I enjoy the whole stack, but I'm most energized by 
